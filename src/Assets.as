@@ -4,6 +4,7 @@ package
 	import flash.utils.Dictionary;
 	
 	import starling.textures.Texture;
+	import starling.textures.TextureAtlas;
 
 	public class Assets
 	{
@@ -24,6 +25,20 @@ package
 		
 		
 		private static var gameTextures:Dictionary = new Dictionary();
+		private static var gameTextureAtlas:TextureAtlas;
+		
+		[Embed(source="../media/graphics/mySpritesheet.png")]
+		public static const AtlasTextureGame:Class;
+		
+		[Embed(source="../media/graphics/mySpritesheet.xlm", mimeType="application/octet-stream")]
+		public static const AtlasXmlGame:Class;
+		
+		
+		
+		public static function getAtlas():TextureAtlas
+		{
+			
+		}
 		
 		public static function getTexture(name:String):Texture
 		{
