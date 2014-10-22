@@ -33,15 +33,15 @@ package screens
 		
 		private function drawScreen():void
 		{
-			bg = new Image(Assets.getTexture("BgWelcome"));
-			title.x = 440;
-			title.y = 20;
+			bg = new Image(Assets.getTexture("BgWelcome"));	
 			this.addChild(bg);
 			
 			title = new Image(Assets.getTexture("WelcomeTitle"));
+			title.x = 440;
+			title.y = 20;
 			this.addChild(title);
 			
-			bg = new Image(Assets.getTexture("WelcomeHero"));
+			hero = new Image(Assets.getTexture("WelcomeHero"));
 			this.addChild(hero);
 			hero.x = -hero.width;
 			hero.y = 100;
