@@ -10,20 +10,20 @@ package
 		[Embed(source="../media/graphics/bgWelcome.jpg")]
 		public static const Bgwelcome:Class;
 		
-		[Embed(source="../media/graphics/welcome_hero.jpg")]
+		[Embed(source="../media/graphics/welcome_hero.png")]
 		public static const Welcome_hero:Class;
 		
-		[Embed(source="../media/graphics/welcome_title.jpg")]
+		[Embed(source="../media/graphics/welcome_title.png")]
 		public static const WelcomeTitle:Class;
 		
-		[Embed(source="../media/graphics/welcome_playButton.jpg")]
+		[Embed(source="../media/graphics/welcome_playButton.png")]
 		public static const WelcomePlayBtn:Class;
 		
-		[Embed(source="../media/graphics/welcome_aboutButton.jpg")]
-		public static const Bgwelcome:Class;
+		[Embed(source="../media/graphics/welcome_aboutButton.png")]
+		public static const WelcomeAboutBtn:Class;
 		
 		[Embed(source="../media/graphics/bgWelcome.jpg")]
-		public static const WelcomeAboutBtn:Class;
+		public static const bgWelcome:Class;
 		
 		private static var gameTextures:Dictionary = new Dictionary();
 		
