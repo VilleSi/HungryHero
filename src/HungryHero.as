@@ -22,7 +22,7 @@ package
 				this.addChild(stats);
 				
 				
-				myStarling = new Starling (screens.inGame, stage);
+				myStarling = new Starling (Game, stage);
 				myStarling.antiAliasing = 1;
 				myStarling.start();
 		}
