@@ -30,16 +30,22 @@ package
 		[Embed(source="../media/graphics/mySpritesheet.png")]
 		public static const AtlasTextureGame:Class;
 		
-		[Embed(source="../media/graphics/mySpritesheet.xlm", mimeType="application/octet-stream")]
+		[Embed(source="../media/graphics/mySpritesheet.xml", mimeType="application/octet-stream")]
 		public static const AtlasXmlGame:Class;
 		
 		
 		
 		public static function getAtlas():TextureAtlas
 		{
-			
+			if (gameTextureAtlas == null)
+			{
+				var texture:Texture = getTexture("AtlasTextureGame");
+				var xml:XML = XML(new AtlasXmlGame());
+				gameTextureAtlas = new TextureAtlas(texture, xml);
+			}
+			return gameTextureAtlas
 		}
-		
+	
 		public static function getTexture(name:String):Texture
 		{
 			if (gameTextures[name] == undefined)
