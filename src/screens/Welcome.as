@@ -65,9 +65,14 @@ package screens
 			var buttonClicked:Button = event.target as Button;
 			if((event.target as Button)== playBtn)
 			{
-				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "play"}, true));
+				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "play"}, true));	
+			}
+			else if((event.target as Button)== aboutBtn)
+			{
+				this.dispatchEvent(new NavigationEvent(NavigationEvent.CHANGE_SCREEN, {id: "about"}, true));
+			}
 		}
-	}
+		
 		public function disposeTemporarily():void
 		{
 			this.visible = false;
@@ -93,6 +98,8 @@ package screens
 			hero.y = 100 + (Math.cos(currentDate.getTime() * 0.002) * 25);
 			playBtn.y = 260 + (Math.cos(currentDate.getTime() * 0.002) * 10);
 			aboutBtn.y = 380 + (Math.cos(currentDate.getTime() * 0.002) * 10);
+			
+		
 		}
 	}
 }
