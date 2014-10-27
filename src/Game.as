@@ -11,7 +11,7 @@ package
 	public class Game extends Sprite
 	{
 		private var screenWelcome:Welcome;
-		private var screenInGame:inGame
+		private var screenInGame:inGame;
 			
 		public function Game()
 		{
@@ -26,6 +26,7 @@ package
 			this.addEventListener(events.NavigationEvent.CHANGE_SCREEN, onChangeScreen);
 			
 			screenInGame = new inGame();
+			screenInGame.disposeTemporarily();
 			this.addChild(screenInGame);
 			
 			screenWelcome = new Welcome();
@@ -39,7 +40,9 @@ package
 			switch (event.params.id)
 			{
 					case "play":
-						break
+						screenWelcome.disposeTemporarily();
+						screenInGame.initialize();
+						break;
 			}
 			
 		}
