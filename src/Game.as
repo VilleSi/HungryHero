@@ -54,6 +54,11 @@ package
 						screenWelcome.disposeTemporarily();
 						screenInAbout.initialize();
 						break;
+					
+					case "back":
+						screenInAbout.disposeTemporarily();
+						screenWelcome.initialize();
+						break;
 			}
 		
 		}
