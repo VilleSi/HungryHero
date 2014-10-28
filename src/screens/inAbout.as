@@ -46,12 +46,7 @@ package screens
 			backBtn.y = 260;
 			this.addChild(backBtn);
 			
-			hero = new Image(Assets.getAtlas().getTexture("welcome_hero"));
-			this.addChild(hero);
-			hero.x = -hero.width;
-			hero.y = 100;
-			
-		
+	
 			
 			this.addEventListener(Event.TRIGGERED, onAboutClick);
 		}
