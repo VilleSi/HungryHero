@@ -20,14 +20,14 @@ package objects
 			this.addEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
 		}
 		
-		private function onAddedToStage():void
+		private function onAddedToStage(event:Event):void
 		{
 			this.removeEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);	
 			
 			if (_layer == 1)
 			{
-				image1 == new Image(Assets.getTexture("BgLayer" + _layer));
-				image2 == new Image(Assets.getTexture("BgLayer" + _layer));
+				image1 = new Image(Assets.getTexture("BgLayer" + _layer));
+				image2 = new Image(Assets.getTexture("BgLayer" + _layer));
 			}
 			else
 			{
@@ -38,7 +38,7 @@ package objects
 			image1.y = stage.stageHeight - image1.height;
 			
 			image2.x = image2.width;
-			image2.y = image1.width;
+			image2.y = image1.y;
 			
 			this.addChild(image1);
 			this.addChild(image2);
