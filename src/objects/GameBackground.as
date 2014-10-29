@@ -18,7 +18,7 @@ package objects
 			this.addEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);
 		}
 		
-		private function onAddedToStage():void
+		private function onAddedToStage(event:Event):void
 		{
 			this.removeEventListener(starling.events.Event.ADDED_TO_STAGE, onAddedToStage);	
 			
@@ -41,7 +41,7 @@ package objects
 			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
 		
-		private function onEnterFrame():void
+		private function onEnterFrame(event:Event):void
 		{
 			bgLayer1.x -= Math.ceil(_speed *bgLayer1.parallax);
 			if (bgLayer1.x < -stage.stageWidth) bgLayer1.x = 0;
